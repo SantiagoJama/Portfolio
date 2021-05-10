@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+
+/* 
+Aclaración importante:
+
+    Desarrollado por; Santiago Jama, como solución a los proyectos 
+    propuestos en el curso llevado a cabo en FreeCodeCamp. 
+
+    Los diseños pertenecen a la organización FreeCodeCamp. 
+    FreeCodeCamp provee los diseños como muestra, según los requerimientos (user stories) de los proyectos.
+
+    Todo el HTML y el CSS es de mi autoría.
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+
+.main-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: .1fr 2fr 2fr 1fr .5fr;
+    grid-template-areas: 
+        "header header header"
+        "content1 content1 content1"
+        "content2 content2 content2"
+        "contact contact contact"
+        "footer footer footer"
+    ;
+    
+
+}
+
+    header{
+        grid-area: header;
+        background-color: hsl(0, 72%, 48%);
+        position: fixed;
+        width: 100%;
+        height: auto;
+    }
+        #navbar{
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: center;
+            justify-content: flex-end;
+            
+        }
+            ul{
+            
+                display: flex;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: flex-end;
+                
+              
+            }
+               
+                ul>li{
+                    display: inline-block;
+                    display: block;
+                    list-style-type: none;
+                    padding: 1em;
+                   
+                }
+
+                li>a{
+                    text-decoration: none;
+                    color: white;
+                    font-size: 1.4rem;
+                    display: block;
+                    font-weight: bolder;
+                   
+
+                }
+                li:hover{
+                    background-color:rgb(54, 84, 124);
+                }
+
+
+#welcome-section{
+    grid-area: content1;
+    background-color: hsl(0, 2%, 19%);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+}
+    .name{
+        color: white;
+        text-align: center;
+        border-bottom: 1px solid white;
+        font-size: 2.5rem;
+     
+    }
+    .message{
+        text-align: center;
+        color: white;
+        display: inline-block;
+    }
+
+    
+#projects{
+    grid-area: content2;
+    background-color:rgb(54, 84, 124);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+    .intro-message{
+        padding-top: 1em;
+        padding-bottom: 1em;
+        color: white;
+        font-size: 2rem;
+        font-weight: bolder;
+        text-align: center;
+    }
+    .intro-message>p{
+        line-height: 170%;
+    }
+        span{
+            border-bottom: 3px solid white;
+        }
+        .link-to-freecodecamp{
+            background-color: black;
+            color: white;
+            text-decoration: none;
+            padding: .2em;
+            border-radius: 3%;
+            margin-right: .3em;
+        }
+            .link-to-freecodecamp:hover{
+                border-bottom:3px solid white;
+            }
+    .project-presentation{
+        padding-top: 2em;
+        padding-bottom: 2em;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+    }
+
+    .project-tile{
+        width: 30%;
+        height: auto;
+        text-align: center;
+        color: white;
+        font-size: 1.9rem;
+        font-weight: bolder;
+        
+    }
+  
+    .project-tile>p{
+        display: inline-block;
+    }
+    .project-tile>p:hover{
+       border-bottom: 1px solid white;
+       cursor:default;
+    }
+       
+            .img-project{
+                width: 100%;
+                height: 85%;
+                border-radius: 1%;
+            }
+            
+            
+
+           
+            
+            
+
+#contact{
+    grid-area: contact;
+    background-color: hsl(0, 2%, 19%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+        .message{
+            font-size: 2rem;
+            border-bottom: 2px solid white;
+        }
+        .message>p{
+            font-size: 1.5rem;
+        }
+        .media-container{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: center;
+            justify-content: space-around;
+            height: auto;
+            width: 30%;
+            text-align: center;
+         
+        }
+            .media{
+                width: 20%;
+                height: auto; 
+                border-radius: 100%;     
+            } 
+                .media>a{
+                    color: white;
+                    text-decoration: none;
+                    font-size: 1.5rem; 
+                    margin-top: 1em;   
+                } 
+                .media>a:hover{
+                    border-bottom: 1px solid white;   
+                }
+                
+                .media-img{
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 100%;
+                    display:block;
+                }
+            
+            
+
+    footer{
+        border-top: 2px solid red;
+        grid-area: footer;
+        background-color: hsl(0, 2%, 19%);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: flex-end;
+        justify-content: space-around;
+        font-size: 1.3rem;
+        padding-right: 1em;
+    }
+      
+        .fcc-link{
+            text-decoration: none;
+            color: white;
+            font-size: 2rem;
+            display: inline-block;
+            background-color: black;
+            padding: .5em;
+            border-radius: 5%;
+        }
+
+      
+@media (max-width:700px){
+    .media-container{
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        width: 100%;
+        text-align: center;
+        padding-top: 1em;
+    }
+        .media{
+            width: 20%;
+            height: auto; 
+            border-radius: 100%;  
+            padding-bottom: .5em; 
+            margin-bottom: 2.2em;  
+        } 
+        .intro-message{
+           padding: 0.5em .5em 0em 0.5em;
+        }
+        footer{
+            padding: 0.5em 0em 0em 0.5em;
+        }
+        .fcc-link{
+            margin-right: .5em;
+        }
+        .name{
+            margin: 0em 1em 0em 1em;
+        }
+
+        .message{
+            padding-top: .5em;
+            margin: 0em 1em 0em 1em;
+        }
+}
